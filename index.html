@@ -9,6 +9,8 @@
           var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
           document.getElementById('timeDifference').textContent = diffDays;
         }
+        // 更新本地时间的显示
+        setInterval(calculateDays, 1000); // 每秒更新一次
       </script>
       <script>
         // 获取并显示本地时间
@@ -21,33 +23,83 @@
         // 更新本地时间的显示
         setInterval(displayLocalTime, 1000); // 每秒更新一次
       </script>
+        <script>
+          // 计算日期差的函数
+          function calculateAnniversary() {
+            var startDate = new Date('2022-07-13'); // 开始日期，即成为情侣的日期
+            var today = new Date(); // 当前日期
+      
+            // 计算年份差异
+            var diffYears = today.getFullYear() - startDate.getFullYear();
+      
+            // 将今天的日期设置为开始日期的周年纪念日
+            var anniversaryDate = new Date(startDate);
+            anniversaryDate.setFullYear(today.getFullYear());
+      
+            // 如果今天的日期早于开始日期的周年纪念日，则年份差异减1
+            if (today < anniversaryDate) {
+              diffYears--;
+            }
+      
+            // 计算剩余天数
+            var timeDiff = Math.abs(anniversaryDate.getTime() - today.getTime());
+            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+      
+            document.getElementById('anniversaryYears').textContent = diffYears+1;
+            document.getElementById('countdownDays').textContent = diffDays;
+          }
+      
+          // 更新纪念日和倒计时的显示
+          setInterval(calculateAnniversary, 1000); // 每秒更新一次
+        </script>
 <head>
   <title>小狗鱼与大明星的相爱之路</title>
   <style>
-    /* 在这里添加您的样式规则 */
+      .name {
+				color: black;
+				font-weight: bold;
+				font-size: 55px;
+				height: 30px;
+        text-align: center;
+        white-space: nowrap;
+        display: block;
+        margin-bottom: 50px;
+			}
+
+    	.icon {
+				color: red;
+				font-weight: bold;
+				font-size: 55px;
+				height: 60px;
+        display: inline-block;
+			}
+
+      .text {
+				color: black;
+				font-weight: bold;
+				font-size: 25px;
+				height: 30px;
+        text-align: center;
+        white-space: nowrap;
+        display: block;
+        margin-bottom: 20px;
+			}
   </style>
 </head>
 <body>
-  <h1>小狗鱼与大明星的相爱之路</h1>
-  
-  <h2>引言</h2>
-  <p>在2022年7月13日，小狗鱼和大明星成为情侣，从那一刻起，他们的爱情故事开始了。</p>
-  <p>小狗鱼和大明星已经相恋了 <span id="timeDifference"></span> 天。</p>
-  <p>当前本地时间为：<span id="localTime"></span></p>
-  <p>小狗鱼和大明星于xxxx年xx月xx日相识，他们首次见面的场景是xxxx，地点是xxxx，那个时刻对他们来说非常特别。</p>
-  
-  <h2>相知</h2>
-  <p>自从他们相识以来，小狗鱼和大明星经历了许多美好的时刻和困难的挑战，他们共同成长和相互了解，建立了深厚的感情。</p>
-  
-  <h2>相爱</h2>
-  <p>小狗鱼的出生日期是1999年1月5日，大明星的出生日期是1998年7月24日。他们相爱的过程中，彼此支持、鼓励和陪伴，他们的爱情越来越深，建立了坚实的感情基础。</p>
-  
+  <h1 class="name">小狗鱼与大明星的相爱之路</h1>
+  <div class="name">小狗鱼<div class="icon">❤</div>大明星</div>
+  <div class="text">2022年7月13日!</div>
+  <div class="text"> 小狗鱼和大明星成为情侣，从那一刻起，他们的爱情故事开始了</div>
+  <div class="text">小狗鱼和大明星已经相恋了 <span id="timeDifference"></span> 天</div>
+  <div class="text">距离第 <span id="anniversaryYears"></span> 个纪念日</div>
+  <div class="text">还有 <span id="countdownDays"></span> 天</div>
   <!-- 在这里继续添加您的网页内容 -->
-  <script>
+  <!-- <script>
     // 更新时间差的显示
     document.addEventListener("DOMContentLoaded", function(event) {
       calculateDays();
     });
-  </script>
+  </script> -->
 </body>
 </html>
