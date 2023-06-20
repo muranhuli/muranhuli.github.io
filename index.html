@@ -1,180 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
+    <script>
+        // 计算日期差的函数
+        function calculateDays() {
+          var startDate = new Date('2022-07-13');
+          var today = new Date();
+          var timeDiff = Math.abs(today.getTime() - startDate.getTime());
+          var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+          document.getElementById('timeDifference').textContent = diffDays;
+        }
+      </script>
+      <script>
+        // 获取并显示本地时间
+        function displayLocalTime() {
+          var currentTime = new Date();
+          var timeString = currentTime.toLocaleString();
+          document.getElementById('localTime').textContent = timeString;
+        }
+    
+        // 更新本地时间的显示
+        setInterval(displayLocalTime, 1000); // 每秒更新一次
+      </script>
 <head>
-  <meta charset="UTF-8">
-  <title>元旦快乐</title>
-  <link rel="stylesheet" type="text/css" href="style.css" >
+  <title>小狗鱼与大明星的相爱之路</title>
+  <style>
+    /* 在这里添加您的样式规则 */
+  </style>
 </head>
-
 <body>
-  <ul class="bgg">
-    <li class="sphere"></li>
-    <p class="text">大明星~元旦快乐！</p>
-    <p class="text">2023，天天快乐，万事如意！</p>
-    <p class="text">小狗鱼永远爱你！</p>
-  </ul>
-  <ul class="tree">
-    <li class="top-star"> </li>
-    <li class="top">
-      <ul class="tree-pts">
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-      </ul>
-    </li>
-    <li class="middle first">
-      <ul class="tree-pts">
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-      </ul>
-    </li>
-    <li class="middle second">
-      <ul class="tree-pts">
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-      </ul>
-    </li>
-    <li class="middle third">
-      <ul class="tree-pts">
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-      </ul>
-    </li>
-    <li class="bottom outer">
-      <ul class="tree-pts">
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts left"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-        <li class="pts right"></li>
-      </ul>
-    </li>
-    <li class="stem">
-      <ul class="tree-stem">
-        <li class="stem"></li>
-        <li class="gift g1"></li>
-        <li class="gift g2"></li>
-        <li class="gift g3"></li>
-        <li class="gift g4"></li>
-        <li class="gift g5"></li>
-        <li class="gift g6"></li>
-        <li class="gift g7"></li>
-        <li class="gift g8"></li>
-        <li class="gift g9"></li>
-        <li class="shadow"></li>
-      </ul>
-    </li>
-  </ul>
-  <ul class="toys">
-    <li class="star"></li>
-    <li class="ball b1"></li>
-    <li class="ball b2"></li>
-    <li class="ball b3"></li>
-    <li class="ball b4"></li>
-    <li class="ball b5"></li>
-    <li class="ball b6"></li>
-    <li class="ball b7"></li>
-    <li class="ball b8"></li>
-    <li class="ball b9"></li>
-    <li class="ball b10"></li>
-    <li class="ball b11"></li>
-    <li class="ball b12"></li>
-    <li class="ball b13"></li>
-    <li class="ball b14"></li>
-    <li class="ball b15"></li>
-    <li class="ball b16"></li>
-    <li class="ball b17"></li>
-    <li class="ball b18"></li>
-    <li class="ball b19"></li>
-    <li class="ball b20"></li>
-    <li class="light l1"></li>
-    <li class="light l2"></li>
-    <li class="light l3"></li>
-    <li class="light l4"></li>
-    <li class="light l5"></li>
-    <li class="light l6"></li>
-    <li class="light l7"></li>
-    <li class="light l8"></li>
-    <li class="light l9"></li>
-    <li class="light l10"></li>
-    <li class="light l11"></li>
-    <li class="light l12"></li>
-    <li class="light l13"></li>
-    <li class="light l14"></li>
-    <li class="light l15"></li>
-    <li class="light l16"></li>
-    <li class="light l17"></li>
-    <li class="light l18"></li>
-    <li class="light l19"></li>
-    <li class="light l20"></li>
-    <li class="light l21"></li>
-    <li class="light l22"></li>
-    <li class="light l23"></li>
-    <li class="light l24"></li>
-    <li class="light l25"></li>
-  </ul>
+  <h1>小狗鱼与大明星的相爱之路</h1>
+  
+  <h2>引言</h2>
+  <p>在2022年7月13日，小狗鱼和大明星成为情侣，从那一刻起，他们的爱情故事开始了。</p>
+  <p>小狗鱼和大明星已经相恋了 <span id="timeDifference"></span> 天。</p>
+  <p>当前本地时间为：<span id="localTime"></span></p>
+  <p>小狗鱼和大明星于xxxx年xx月xx日相识，他们首次见面的场景是xxxx，地点是xxxx，那个时刻对他们来说非常特别。</p>
+  
+  <h2>相知</h2>
+  <p>自从他们相识以来，小狗鱼和大明星经历了许多美好的时刻和困难的挑战，他们共同成长和相互了解，建立了深厚的感情。</p>
+  
+  <h2>相爱</h2>
+  <p>小狗鱼的出生日期是1999年1月5日，大明星的出生日期是1998年7月24日。他们相爱的过程中，彼此支持、鼓励和陪伴，他们的爱情越来越深，建立了坚实的感情基础。</p>
+  
+  <!-- 在这里继续添加您的网页内容 -->
+  <script>
+    // 更新时间差的显示
+    document.addEventListener("DOMContentLoaded", function(event) {
+      calculateDays();
+    });
+  </script>
 </body>
-
 </html>
