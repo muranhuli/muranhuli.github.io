@@ -1,6 +1,6 @@
 export BASE_PATH=$(cd `dirname $0`;pwd)
 if [ ! $1 ]; then
-    $1='production'
+    $1='preview'
 fi
 # Build front with yarn.
 cd $BASE_PATH/../
