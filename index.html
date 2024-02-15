@@ -1,105 +1,14 @@
 <!DOCTYPE html>
-<html>
-    <script>
-        // 计算日期差的函数
-        function calculateDays() {
-          var startDate = new Date('2022-07-13');
-          var today = new Date();
-          var timeDiff = Math.abs(today.getTime() - startDate.getTime());
-          var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-          document.getElementById('timeDifference').textContent = diffDays;
-        }
-        // 更新本地时间的显示
-        setInterval(calculateDays, 1000); // 每秒更新一次
-      </script>
-      <script>
-        // 获取并显示本地时间
-        function displayLocalTime() {
-          var currentTime = new Date();
-          var timeString = currentTime.toLocaleString();
-          document.getElementById('localTime').textContent = timeString;
-        }
-    
-        // 更新本地时间的显示
-        setInterval(displayLocalTime, 1000); // 每秒更新一次
-      </script>
-        <script>
-          // 计算日期差的函数
-          function calculateAnniversary() {
-            var startDate = new Date('2022-07-13'); // 开始日期，即成为情侣的日期
-            var today = new Date(); // 当前日期
-      
-            // 计算年份差异
-            var diffYears = today.getFullYear() - startDate.getFullYear();
-      
-            // 将今天的日期设置为开始日期的周年纪念日
-            var anniversaryDate = new Date(startDate);
-            anniversaryDate.setFullYear(today.getFullYear());
-      
-            // 如果今天的日期早于开始日期的周年纪念日，则年份差异减1
-            if (today < anniversaryDate) {
-              diffYears--;
-            }
-      
-            // 计算剩余天数
-            var timeDiff = Math.abs(anniversaryDate.getTime() - today.getTime());
-            var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      
-            document.getElementById('anniversaryYears').textContent = diffYears+1;
-            document.getElementById('countdownDays').textContent = diffDays;
-          }
-      
-          // 更新纪念日和倒计时的显示
-          setInterval(calculateAnniversary, 1000); // 每秒更新一次
-        </script>
-<head>
-  <title>小狗鱼与大明星的相爱之路</title>
-  <style>
-      .name {
-				color: black;
-				font-weight: bold;
-				font-size: 55px;
-				height: 30px;
-        text-align: center;
-        white-space: nowrap;
-        display: block;
-        margin-bottom: 50px;
-			}
-
-    	.icon {
-				color: red;
-				font-weight: bold;
-				font-size: 55px;
-				height: 60px;
-        display: inline-block;
-			}
-
-      .text {
-				color: black;
-				font-weight: bold;
-				font-size: 25px;
-				height: 30px;
-        text-align: center;
-        white-space: nowrap;
-        display: block;
-        margin-bottom: 20px;
-			}
-  </style>
-</head>
-<body>
-  <h1 class="name">小狗鱼与大明星的相爱之路</h1>
-  <div class="name">小狗鱼<div class="icon">❤</div>大明星</div>
-  <div class="text">2022年7月13日!</div>
-  <div class="text"> 小狗鱼和大明星成为情侣，从那一刻起，他们的爱情故事开始了</div>
-  <div class="text">小狗鱼和大明星已经相恋了 <span id="timeDifference"></span> 天</div>
-  <div class="text">距离第 <span id="anniversaryYears"></span> 个纪念日</div>
-  <div class="text">还有 <span id="countdownDays"></span> 天</div>
-  <!-- 在这里继续添加您的网页内容 -->
-  <!-- <script>
-    // 更新时间差的显示
-    document.addEventListener("DOMContentLoaded", function(event) {
-      calculateDays();
-    });
-  </script> -->
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script src="js/zepto.min.js"></script>
+  </body>
 </html>
